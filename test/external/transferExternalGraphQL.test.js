@@ -11,7 +11,7 @@ describe('Testes de Transferência', () => {
         const respostaLogin = await request(baseUrl)
             .post('/users/login')
             .send({
-                username: 'marjorie',
+                username: 'julio',
                 password: '123456'
             });
 
@@ -23,8 +23,8 @@ describe('Testes de Transferência', () => {
             .post('/transfers')
             .set('Authorization', `Bearer ${token}`)
             .send({
-                from: "marjorie",
-                to: "bryan",
+                from: "julio",
+                to: "priscila",
                 value: 100
             });
 
@@ -40,8 +40,8 @@ describe('Testes de Transferência', () => {
             .post('/transfers')
             .set('Authorization', `Bearer ${token}`)
             .send({
-                from: "marjorie",
-                to: "bryan",
+                from: "julio",
+                to: "priscila",
                 value: 999999 
             });
 
@@ -53,8 +53,8 @@ describe('Testes de Transferência', () => {
         const resposta = await request(baseUrl)
             .post('/transfers')
             .send({
-                from: "marjorie",
-                to: "bryan",
+                from: "julio",
+                to: "priscila",
                 value: 100
             });
 
